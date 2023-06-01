@@ -4,6 +4,8 @@ import jakarta.persistence.EntityManager;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
 
 class EnvioIT {
 
@@ -23,4 +25,20 @@ class EnvioIT {
         envio.setProducto(producto);
         assert (envio.getProducto()== producto);
     }
+
+    //Compruebo la existencia de la calse producto
+    @Test
+    public void verificarExistenciaClaseProducto(){
+        Producto producto = new Producto("Celular");
+        assertNotNull(producto);
+    }
+
+    //Compruebo que el tipo de ciudad destino sea un string
+    @Test
+    public void verificarTipoCiudadDestino(){
+        Envio envio = new Envio();
+        envio.setCiudaddestino("Bogota");
+        assert (envio.getCiudaddestino() instanceof String);
+    }
+
 }
