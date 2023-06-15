@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+    branches: [ "Prod" ]
+  pull_request:
+    branches: [ "Prod" ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout del código fuente
+      uses: actions/checkout@v2
+
+    - name: Configurar Java
+      uses: actions/setup-java@v2
+      with:
+        java-version: '11'
+
+    - name: Compilar y ejecutar tests
+      run: mvn clean test
+
+    - name: Realizar build
+      run: mvn clean package
