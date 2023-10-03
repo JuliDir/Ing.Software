@@ -13,7 +13,6 @@ public class Envio {
     private Producto producto;
     private double costoEnvio;
     private String observacionesEnvio;
-
     public Envio(){};
 
     public Envio(Long codigoEnvio, String courier, String ciudadorigen, String ciudaddestino, Date fechaEnvio, double costoEnvio, String observacionesEnvio) {
