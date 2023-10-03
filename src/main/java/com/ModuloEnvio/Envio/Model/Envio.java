@@ -11,7 +11,6 @@ public class Envio {
     private Date fechaEnvio;
     private EstadoEnvio estadoEnvio;
     private Producto producto;
-    private double costoEnvio;
     private String observacionesEnvio;
 
     public Envio(){};
