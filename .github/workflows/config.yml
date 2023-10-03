@@ -26,3 +26,6 @@ jobs:
 
     - name: Realizar build
       run: mvn clean package
+
+    - name: Crear jar y ejecutar app
+      run: mvn verify
