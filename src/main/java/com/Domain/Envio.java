@@ -17,6 +17,7 @@ public class Envio {
     private String observacionesEnvio;
     public Envio(){};
 
+    //ee
     public Envio(Long codigoEnvio, String courier, String ciudadorigen, String ciudaddestino, Date fechaEnvio, double costoEnvio, String observacionesEnvio) {
         this.codigoEnvio = codigoEnvio;
         this.courier = courier;
