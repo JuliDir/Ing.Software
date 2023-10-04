@@ -5,12 +5,23 @@ on:
     branches: [ "Prod" ]
   pull_request:
     branches: [ "Prod" ]
+  workflow_call:
+    secrets:
+      access-token:
+        description: '180401'
+        required: true
 
 jobs:
   build:
     runs-on: windows-latest
 
     steps:
+
+    - name: Pass the received secret to an action
+      uses: ./.github/actions/CI
+      with:
+          token: ${{ secrets.access-token }
+
     - name: Checkout del código fuente
       uses: actions/checkout@v3
 
@@ -29,3 +40,34 @@ jobs:
 
     - name: Crear jar y ejecutar app
       run: mvn verify
+
+    - name: Crear solicitud de extracción
+      if: success()
+      run: |
+        # Configurar las variables necesarias
+        GITHUB_TOKEN=${{ secrets.CIRO }}
+        TARGET_BRANCH="Prod"
+        BASE_BRANCH="main"  # Reemplaza 'main' por la rama base que desees
+
+        # Crear la solicitud de extracción usando la API de GitHub
+        curl -X POST \
+          -H "Authorization: token $GITHUB_TOKEN" \
+          -H "Accept: application/vnd.github.v3+json" \
+          https://api.github.com/repos/Nicbag/Ing.Software/pulls \
+          -d '{
+            "title": "Nueva funcionalidad",
+            "head": "'$GITHUB_REF'",
+            "base": "'$TARGET_BRANCH'",
+            "body": "Esta es una nueva funcionalidad."
+          }'
+
+pass-secret-to-workflow:
+  uses: ./.github/workflows/config
+  secrets:
+    token: ${{ secrets.access-token }}
+
+
+
+
+
+
