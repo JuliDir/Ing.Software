@@ -1,10 +1,10 @@
 package com.ModuloEnvio.Envio;
 
-import com.ModuloCarrito.Carrito.Model.Carrito;
-import com.ModuloCarrito.Carrito.Model.CarritoDetalle;
-import com.ModuloEnvio.Envio.Model.Envio;
-import com.ModuloEnvio.Envio.Model.EstadoEnvio;
-import com.ModuloEnvio.Envio.Model.Producto;
+import com.Domain.Carrito;
+import com.Domain.CarritoDetalle;
+import com.Domain.Envio;
+import com.Domain.EstadoEnvio;
+import com.Domain.Producto;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -91,6 +91,13 @@ class EnvioApplicationTests {
 		Envio envio = new Envio();
 		envio.setCiudaddestino("Bogota");
 		assert (envio.getCiudaddestino() instanceof String);
+	}
+
+	@Test
+	public void verificarOrigenDestino(){
+		Envio envio= new Envio();
+		envio.setCiudades("Mendoza","Córdoba");
+		assert (envio.getCiudadorigen() != null && envio.getCiudaddestino() != null);
 	}
 
 }
