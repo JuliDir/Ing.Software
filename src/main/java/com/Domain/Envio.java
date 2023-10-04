@@ -1,5 +1,7 @@
-package com.ModuloEnvio.Envio.Model;
+package com.Domain;
 
+import java.time.Instant;
+import java.time.LocalDate;
 import java.util.Date;
 
 public class Envio {
@@ -13,7 +15,6 @@ public class Envio {
     private Producto producto;
     private double costoEnvio;
     private String observacionesEnvio;
-
     public Envio(){};
 
     //ee
@@ -25,6 +26,14 @@ public class Envio {
         this.fechaEnvio = fechaEnvio;
         this.costoEnvio = costoEnvio;
         this.observacionesEnvio = observacionesEnvio;
+    }
+
+    public Envio(Envio envio) {
+        this.codigoEnvio = envio.getCodigoEnvio();
+        this.courier = envio.getCourier();
+        this.fechaEnvio = Date.from(Instant.now());
+        this.costoEnvio = envio.getCostoEnvio();
+        this.observacionesEnvio = envio.getObservacionesEnvio();
     }
 
     public Long getCodigoEnvio() {
@@ -104,4 +113,10 @@ public class Envio {
             this.getEstadoEnvio().setNombreEnvio("Activo");
         }
     }
+
+    public void setCiudades(String origen, String destino){
+        this.setCiudadorigen(origen);
+        this.setCiudaddestino(origen);
+    }
+
 }

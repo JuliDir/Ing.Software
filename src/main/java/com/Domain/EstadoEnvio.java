@@ -1,4 +1,4 @@
-package com.ModuloEnvio.Envio.Model;
+package com.Domain;
 
 public class EstadoEnvio {
 

@@ -1,4 +1,4 @@
-package com.ModuloCarrito.Carrito.Model;
+package com.Domain;
 
 public class CarritoDetalle {
     private int cantidad;
