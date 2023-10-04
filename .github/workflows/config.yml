@@ -2,9 +2,13 @@ name: CI
 
 on:
   push:
-    branches: [ "Dev" ]
+    branches:
+      - '**'
+      - '!Dev'
   pull_request:
-    branches: [ "Dev" ]
+    branches:
+      - '**'
+      - '!Dev'
   workflow_call:
     secrets:
       access-token:
@@ -16,6 +20,7 @@ jobs:
     runs-on: windows-latest
 
     steps:
+
       - name: Pass the received secret to an action
         uses: ./.github/actions/CI
         with:
@@ -46,6 +51,7 @@ jobs:
           # Configurar las variables necesarias
           GITHUB_TOKEN=${{ secrets.CIRO }}
           TARGET_BRANCH="Dev"
+          
           
           # Crear la solicitud de extracción usando la API de GitHub
           curl -X POST \
