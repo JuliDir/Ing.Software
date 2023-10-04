@@ -1,4 +1,7 @@
 package com.ModuloEnvio.Envio.Model;
+import com.Domain.Envio;
+import com.Domain.EstadoEnvio;
+import com.Domain.Producto;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
