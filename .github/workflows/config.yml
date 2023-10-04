@@ -27,3 +27,7 @@ jobs:
 
     - name: Crear jar y ejecutar app
       run: mvn verify
+
+    - name: Cancelar PR si falla alguno de los pasos
+      if: failure()
+      run: gh pr merge --abort
