@@ -102,4 +102,10 @@ public class Envio {
             this.getEstadoEnvio().setNombreEnvio("Activo");
         }
     }
+
+    public void setCiudades(String origen, String destino){
+        this.setCiudadorigen(origen);
+        this.setCiudaddestino(origen);
+    }
+
 }
