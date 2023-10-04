@@ -3,12 +3,10 @@ name: CI
 on:
   push:
     branches:
-      - '**'
-      - '!Dev'
+      - Prod
   pull_request:
     branches:
-      - '**'
-      - '!Dev'
+      - Prod
   workflow_call:
     secrets:
       access-token:
@@ -50,8 +48,7 @@ jobs:
       run: |
         # Configurar las variables necesarias
         GITHUB_TOKEN=${{ secrets.CIRO }}
-        TARGET_BRANCH="Dev"
-        
+        TARGET_BRANCH="Prod"
           
         # Crear la solicitud de extracción usando la API de GitHub
         curl -X POST \
@@ -65,13 +62,8 @@ jobs:
             "body": "Esta es una nueva funcionalidad."
           }'
 
+  # Agregado el siguiente paso para pasar el secreto a otro flujo de trabajo
   pass-secret-to-workflow:
     uses: ./.github/workflows/config
     secrets:
       token: ${{ secrets.access-token }}
-
-
-
-
-
-
