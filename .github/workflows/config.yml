@@ -16,11 +16,10 @@ jobs:
     runs-on: windows-latest
 
     steps:
-
       - name: Pass the received secret to an action
         uses: ./.github/actions/CI
         with:
-          token: ${{ secrets.access-token }
+          token: ${{ secrets.access-token }}
 
       - name: Checkout del código fuente
         uses: actions/checkout@v3
@@ -60,10 +59,10 @@ jobs:
               "body": "Esta es una nueva funcionalidad."
             }'
 
-pass-secret-to-workflow:
-  uses: ./.github/workflows/config
-  secrets:
-    token: ${{ secrets.access-token }}
+  pass-secret-to-workflow:
+    uses: ./.github/workflows/config
+    secrets:
+      token: ${{ secrets.access-token }}
 
 
 
