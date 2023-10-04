@@ -3,10 +3,12 @@ name: CI
 on:
   push:
     branches:
-      - Prod
+      - '**'
+    branches-ignore:
+      - Dev
   pull_request:
     branches:
-      - Prod
+      - Dev
   workflow_call:
     secrets:
       access-token:
