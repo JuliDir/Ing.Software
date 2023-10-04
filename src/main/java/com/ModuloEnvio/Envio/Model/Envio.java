@@ -12,7 +12,7 @@ public class Envio {
     private EstadoEnvio estadoEnvio;
     private Producto producto;
     private double costoEnvio;
-    private String observacionesEnvio;
+    private tring observacionesEnvio;
 
     public Envio(){};
 
