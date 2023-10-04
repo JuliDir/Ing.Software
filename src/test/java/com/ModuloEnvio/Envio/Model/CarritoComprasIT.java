@@ -1,11 +1,10 @@
 package com.ModuloEnvio.Envio.Model;
 
-import com.ModuloCarrito.Carrito.Model.Carrito;
-import com.ModuloCarrito.Carrito.Model.CarritoDetalle;
+import com.Domain.Carrito;
+import com.Domain.CarritoDetalle;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class CarritoComprasIT {
 
