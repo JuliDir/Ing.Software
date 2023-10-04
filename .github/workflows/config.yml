@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [ "Prod" ]
+    branches: [ "Dev" ]
   pull_request:
-    branches: [ "Prod" ]
+    branches: [ "Dev" ]
   workflow_call:
     secrets:
       access-token:
@@ -46,7 +46,7 @@ jobs:
       run: |
         # Configurar las variables necesarias
         GITHUB_TOKEN=${{ secrets.CIRO }}
-        TARGET_BRANCH="Prod"
+        TARGET_BRANCH="Dev"
         BASE_BRANCH="main"  # Reemplaza 'main' por la rama base que desees
 
         # Crear la solicitud de extracción usando la API de GitHub
