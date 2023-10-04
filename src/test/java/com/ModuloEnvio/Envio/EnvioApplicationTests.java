@@ -93,4 +93,11 @@ class EnvioApplicationTests {
 		assert (envio.getCiudaddestino() instanceof String);
 	}
 
+	@Test
+	public void verificarOrigenDestino(){
+		Envio envio= new Envio();
+		envio.setCiudades("Mendoza","Córdoba");
+		assert (envio.getCiudadorigen() != null && envio.getCiudaddestino() != null);
+	}
+
 }
