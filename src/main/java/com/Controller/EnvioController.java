@@ -2,6 +2,7 @@ package com.Controller;
 
 import com.Domain.Envio;
 import com.Service.EnvioService;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -9,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * Controlador para la gestión de envíos.
  */
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 public class EnvioController {
 
