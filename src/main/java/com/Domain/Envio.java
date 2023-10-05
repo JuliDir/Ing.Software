@@ -116,7 +116,7 @@ public class Envio {
 
     public void setCiudades(String origen, String destino){
         this.setCiudadorigen(origen);
-        this.setCiudaddestino(origen);
+        this.setCiudaddestino(destino);
     }
 
 }
