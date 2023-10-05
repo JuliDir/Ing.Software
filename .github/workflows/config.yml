@@ -27,3 +27,9 @@ jobs:
 
     - name: Crear jar y ejecutar app
       run: mvn verify
+
+    - name: Ejecutar Checkstyle
+      run: |
+        # Instalar Checkstyle (si no está instalado)
+        mvn checkstyle:check
+
