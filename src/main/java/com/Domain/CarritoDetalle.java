@@ -1,9 +1,26 @@
+/**
+ * Clase que representa un carrito de compras.
+ * <p>
+ * Esta clase es la encargada de representar un carrito de compras, el cual
+ * contiene una lista de detalles de carrito.
+ * </p>
+ * <p>
+ * Esta clase es utilizada por la clase Usuario, la cual contiene un carrito de
+ * compras.
+ * </p>
+ *
+ * @since 1.0
+ * @version 1.0 - 20/10/2020
+ */
 package com.Domain;
 
 /**
  * Clase que representa un detalle de un carrito de compras.
  */
 public class CarritoDetalle {
+    /**
+     * La cantidad del detalle.
+     */
     private int cantidad;
 
     /**
@@ -15,10 +32,18 @@ public class CarritoDetalle {
         this.cantidad = cantidad;
     }
 
-    public CarritoDetalle(CarritoDetalle carritoDetalle){
+    /**
+     * Constructor de la clase CarritoDetalle.
+     *
+     * @param carritoDetalle El detalle del carrito.
+     */
+    public CarritoDetalle(CarritoDetalle carritoDetalle) {
         this.cantidad = carritoDetalle.getCantidad();
     }
 
+    /**
+     * Constructor por defecto.
+     */
     public CarritoDetalle() {
     }
 

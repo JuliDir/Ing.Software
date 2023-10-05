@@ -1,3 +1,17 @@
+/**
+ * Clase que representa un carrito de compras.
+ * <p>
+ * Esta clase es la encargada de representar un carrito de compras, el cual
+ * contiene una lista de detalles de carrito.
+ * </p>
+ * <p>
+ * Esta clase es utilizada por la clase Usuario, la cual contiene un carrito de
+ * compras.
+ * </p>
+ *
+ * @since 1.0
+ * @version 1.0 - 20/10/2020
+ */
 package com.Domain;
 
 import java.util.Date;
@@ -6,20 +20,54 @@ import java.util.Date;
  * Clase que representa un envío.
  */
 public class Envio {
-
+    /**
+     * Código del envío.
+     */
     private Long codigoEnvio;
+    /**
+     * Nombre del courier.
+     */
     private String courier;
+    /**
+     * Ciudad de origen.
+     */
     private String ciudadOrigen;
+    /**
+     * Ciudad de destino.
+     */
     private String ciudadDestino;
+    /**
+     * Fecha de envío.
+     */
     private Date fechaEnvio;
+    /**
+     * Estado del envío.
+     */
     private EstadoEnvio estadoEnvio;
+    /**
+     * Producto del envío.
+     */
     private Producto producto;
+    /**
+     * Costo del envío.
+     */
     private double costoEnvio;
+    /**
+     * Observaciones del envío.
+     */
     private String observacionesEnvio;
 
-    public Envio() {}
+    /**
+     * Constructor por defecto.
+     */
+    public Envio() { }
 
-    public Envio(Envio envio){
+    /**
+     * Constructor para inicializar un envío.
+     *
+     * @param envio Objeto de envío.
+     */
+    public Envio(Envio envio) {
         this.codigoEnvio = envio.codigoEnvio;
         this.courier = envio.courier;
         this.ciudadOrigen = envio.ciudadOrigen;
@@ -232,7 +280,17 @@ public class Envio {
      *
      * @param ciudadDestino La ciudad de destino.
      */
-    public void setCiudadDestino(String ciudadDestino) {
+    public void setCiudaddestino(String ciudadDestino) {
         this.ciudadDestino = ciudadDestino;
+    }
+
+    /**
+     * Método para aceptar una solicitud de envío.
+     * Cambia el estado del envío a "Activo" si no lo está ya.
+     */
+    public void aceptarSolicutud() {
+        if (this.getEstadoEnvio().getNombreEnvio() != "Activo") {
+            this.getEstadoEnvio().setNombreEnvio("Activo");
+        }
     }
 }

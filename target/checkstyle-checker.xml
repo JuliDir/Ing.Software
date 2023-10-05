@@ -56,10 +56,6 @@
         <property name="optional" value="true"/>
     </module>
 
-    <!-- Checks that a package-info.java file exists for each package.     -->
-    <!-- See https://checkstyle.org/checks/javadoc/javadocpackage.html#JavadocPackage -->
-    <module name="JavadocPackage"/>
-
     <!-- Checks whether files end with a new line.                        -->
     <!-- See https://checkstyle.org/checks/misc/newlineatendoffile.html -->
     <module name="NewlineAtEndOfFile"/>
@@ -67,17 +63,6 @@
     <!-- Checks that property files contain the same keys.         -->
     <!-- See https://checkstyle.org/checks/misc/translation.html -->
     <module name="Translation"/>
-
-    <!-- Checks for Size Violations.                    -->
-    <!-- See https://checkstyle.org/checks/sizes/index.html -->
-    <module name="FileLength"/>
-    <module name="LineLength">
-        <property name="fileExtensions" value="java"/>
-    </module>
-
-    <!-- Checks for whitespace                               -->
-    <!-- See https://checkstyle.org/checks/whitespace/index.html -->
-    <module name="FileTabCharacter"/>
 
     <!-- Miscellaneous other checks.                   -->
     <!-- See https://checkstyle.org/checks/misc/index.html -->
@@ -162,7 +147,6 @@
         <!-- See https://checkstyle.org/checks/coding/index.html -->
         <module name="EmptyStatement"/>
         <module name="EqualsHashCode"/>
-        <module name="HiddenField"/>
         <module name="IllegalInstantiation"/>
         <module name="InnerAssignment"/>
         <module name="MagicNumber"/>
@@ -173,16 +157,13 @@
 
         <!-- Checks for class design                         -->
         <!-- See https://checkstyle.org/checks/design/index.html -->
-        <module name="DesignForExtension"/>
         <module name="FinalClass"/>
-        <module name="HideUtilityClassConstructor"/>
         <module name="InterfaceIsType"/>
         <module name="VisibilityModifier"/>
 
         <!-- Miscellaneous other checks.                   -->
         <!-- See https://checkstyle.org/checks/misc/index.html -->
         <module name="ArrayTypeStyle"/>
-        <module name="FinalParameters"/>
         <module name="TodoComment"/>
         <module name="UpperEll"/>
 

@@ -13,7 +13,7 @@ public class CarritoComprasIT {
         Carrito carrito = new Carrito(new ArrayList<CarritoDetalle>());
         CarritoDetalle carritoDetalle = new CarritoDetalle();
 
-        carrito.añadirCarritoDetalle(carritoDetalle);
+        carrito.agregarCarridoDetalle(carritoDetalle);
 
         assert (carrito.getCarritoDetalles().contains(carritoDetalle));
     }
@@ -22,7 +22,7 @@ public class CarritoComprasIT {
     public void verificarEliminarCarritoDetalle(){
         Carrito carrito = new Carrito(new ArrayList<CarritoDetalle>());
         CarritoDetalle carritoDetalle = new CarritoDetalle();
-        carrito.añadirCarritoDetalle(carritoDetalle);
+        carrito.agregarCarridoDetalle(carritoDetalle);
 
         carrito.eliminarCarritoDetalle(carritoDetalle);
 

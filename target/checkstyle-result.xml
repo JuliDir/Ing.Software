@@ -1,99 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<checkstyle version="8.29">
+<checkstyle version="9.3">
 <file name="C:\Users\ciro.tello\Desktop\Ing.Software\src\main\java\com\Controller\EnvioController.java">
-<error line="1" severity="error" message="Falta el archivo package-info.java." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"/>
-<error line="15" column="5" severity="error" message="Falta el comentario Javadoc." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
-<error line="22" column="47" severity="error" message="&apos;envioService&apos; oculta un campo." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
+</file>
+<file name="C:\Users\ciro.tello\Desktop\Ing.Software\src\main\java\com\CorsConfig.java">
 </file>
 <file name="C:\Users\ciro.tello\Desktop\Ing.Software\src\main\java\com\Domain\Carrito.java">
-<error line="1" severity="error" message="Falta el archivo package-info.java." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"/>
-<error line="9" column="5" severity="error" message="Falta el comentario Javadoc." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
-<error line="16" column="47" severity="error" message="&apos;carritoDetalles&apos; oculta un campo." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
-<error line="25" column="17" severity="error" message="El nombre &apos;añadirCarritoDetalle&apos; debe coincidir con el patrón &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MethodNameCheck"/>
 </file>
 <file name="C:\Users\ciro.tello\Desktop\Ing.Software\src\main\java\com\Domain\CarritoDetalle.java">
-<error line="7" column="5" severity="error" message="Falta el comentario Javadoc." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
-<error line="14" column="27" severity="error" message="El parámetro cantidad debería ser final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="14" column="31" severity="error" message="&apos;cantidad&apos; oculta un campo." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
-<error line="18" column="5" severity="error" message="Falta el comentario Javadoc." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
-<error line="18" column="27" severity="error" message="El parámetro carritoDetalle debería ser final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="18" column="57" severity="error" message="&apos;{&apos; no está precedido de espacio en blanco." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
-<error line="22" column="5" severity="error" message="Falta el comentario Javadoc." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
-<error line="30" column="37" severity="error" message="El parámetro cantidad debería ser final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="30" column="41" severity="error" message="&apos;cantidad&apos; oculta un campo." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
-<error line="39" column="37" severity="error" message="El parámetro cantidad debería ser final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="39" column="41" severity="error" message="&apos;cantidad&apos; oculta un campo." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
 </file>
 <file name="C:\Users\ciro.tello\Desktop\Ing.Software\src\main\java\com\Domain\Envio.java">
-<error line="10" column="5" severity="error" message="Falta el comentario Javadoc." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
-<error line="11" column="5" severity="error" message="Falta el comentario Javadoc." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
-<error line="12" column="5" severity="error" message="Falta el comentario Javadoc." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
-<error line="13" column="5" severity="error" message="Falta el comentario Javadoc." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
-<error line="14" column="5" severity="error" message="Falta el comentario Javadoc." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
-<error line="15" column="5" severity="error" message="Falta el comentario Javadoc." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
-<error line="16" column="5" severity="error" message="Falta el comentario Javadoc." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
-<error line="17" column="5" severity="error" message="Falta el comentario Javadoc." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
-<error line="18" column="5" severity="error" message="Falta el comentario Javadoc." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
-<error line="20" column="5" severity="error" message="Falta el comentario Javadoc." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
-<error line="20" column="20" severity="error" message="&apos;{&apos; no está seguido de espacio en blanco." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
-<error line="20" column="21" severity="error" message="&apos;}&apos; no está precedido de espacio en blanco." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
-<error line="22" column="5" severity="error" message="Falta el comentario Javadoc." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
-<error line="22" column="18" severity="error" message="El parámetro envio debería ser final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="22" column="30" severity="error" message="&apos;{&apos; no está precedido de espacio en blanco." source="com.puppycrawl.tools.checkstyle.checks.whitespace.WhitespaceAroundCheck"/>
-<error line="45" severity="error" message="La línea es mayor de 80 caracteres (encontrado 93)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
-<error line="45" column="18" severity="error" message="El parámetro codigoEnvio debería ser final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="45" column="23" severity="error" message="&apos;codigoEnvio&apos; oculta un campo." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
-<error line="45" column="36" severity="error" message="El parámetro courier debería ser final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="45" column="43" severity="error" message="&apos;courier&apos; oculta un campo." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
-<error line="45" column="52" severity="error" message="El parámetro ciudadOrigen debería ser final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="45" column="59" severity="error" message="&apos;ciudadOrigen&apos; oculta un campo." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
-<error line="45" column="73" severity="error" message="El parámetro ciudadDestino debería ser final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="45" column="80" severity="error" message="&apos;ciudadDestino&apos; oculta un campo." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
-<error line="46" severity="error" message="La línea es mayor de 80 caracteres (encontrado 81)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
-<error line="46" column="18" severity="error" message="El parámetro fechaEnvio debería ser final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="46" column="23" severity="error" message="&apos;fechaEnvio&apos; oculta un campo." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
-<error line="46" column="35" severity="error" message="El parámetro costoEnvio debería ser final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="46" column="42" severity="error" message="&apos;costoEnvio&apos; oculta un campo." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
-<error line="46" column="54" severity="error" message="El parámetro observacionesEnvio debería ser final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="46" column="61" severity="error" message="&apos;observacionesEnvio&apos; oculta un campo." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
-<error line="70" column="32" severity="error" message="El parámetro codigoEnvio debería ser final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="70" column="37" severity="error" message="&apos;codigoEnvio&apos; oculta un campo." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
-<error line="88" column="28" severity="error" message="El parámetro courier debería ser final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="88" column="35" severity="error" message="&apos;courier&apos; oculta un campo." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
-<error line="106" column="31" severity="error" message="El parámetro fechaEnvio debería ser final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="106" column="36" severity="error" message="&apos;fechaEnvio&apos; oculta un campo." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
-<error line="124" column="32" severity="error" message="El parámetro estadoEnvio debería ser final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="124" column="44" severity="error" message="&apos;estadoEnvio&apos; oculta un campo." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
-<error line="142" column="29" severity="error" message="El parámetro producto debería ser final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="142" column="38" severity="error" message="&apos;producto&apos; oculta un campo." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
-<error line="160" column="31" severity="error" message="El parámetro costoEnvio debería ser final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="160" column="38" severity="error" message="&apos;costoEnvio&apos; oculta un campo." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
-<error line="178" column="39" severity="error" message="El parámetro observacionesEnvio debería ser final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="178" column="46" severity="error" message="&apos;observacionesEnvio&apos; oculta un campo." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
-<error line="198" column="29" severity="error" message="El parámetro origen debería ser final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="198" column="44" severity="error" message="El parámetro destino debería ser final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="217" column="33" severity="error" message="El parámetro ciudadOrigen debería ser final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="217" column="40" severity="error" message="&apos;ciudadOrigen&apos; oculta un campo." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
-<error line="235" column="34" severity="error" message="El parámetro ciudadDestino debería ser final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
-<error line="235" column="41" severity="error" message="&apos;ciudadDestino&apos; oculta un campo." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
 </file>
 <file name="C:\Users\ciro.tello\Desktop\Ing.Software\src\main\java\com\Domain\EstadoEnvio.java">
-<error line="8" column="5" severity="error" message="Falta el comentario Javadoc." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
-<error line="15" column="37" severity="error" message="&apos;nombreEnvio&apos; oculta un campo." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
-<error line="33" column="45" severity="error" message="&apos;nombreEnvio&apos; oculta un campo." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
 </file>
 <file name="C:\Users\ciro.tello\Desktop\Ing.Software\src\main\java\com\Domain\Producto.java">
-<error line="8" column="5" severity="error" message="Falta el comentario Javadoc." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
-<error line="15" column="34" severity="error" message="&apos;nombreProducto&apos; oculta un campo." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
-<error line="33" column="48" severity="error" message="&apos;nombreProducto&apos; oculta un campo." source="com.puppycrawl.tools.checkstyle.checks.coding.HiddenFieldCheck"/>
 </file>
 <file name="C:\Users\ciro.tello\Desktop\Ing.Software\src\main\java\com\EnvioApplication.java">
-<error line="1" severity="error" message="Falta el archivo package-info.java." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"/>
-<error line="9" column="1" severity="error" message="Clases de servicios públicos no deben tener un constructor público o por defecto." source="com.puppycrawl.tools.checkstyle.checks.design.HideUtilityClassConstructorCheck"/>
-<error line="12" column="1" severity="error" message="Archivo contiene caracteres de tabulación (este es el primer ejemplo)." source="com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"/>
 </file>
 <file name="C:\Users\ciro.tello\Desktop\Ing.Software\src\main\java\com\Service\EnvioService.java">
-<error line="1" severity="error" message="Falta el archivo package-info.java." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"/>
 </file>
 <file name="C:\Users\ciro.tello\Desktop\Ing.Software\src\main\resources\application.properties">
 </file>
