@@ -1,71 +1,42 @@
 name: CI
 
 on:
-  push:
-    branches:
-      - '**'
-    branches-ignore:
-      - Dev
   pull_request:
-    branches:
-      - Dev
-  workflow_call:
-    secrets:
-      access-token:
-        description: '180401'
-        required: true
+    branches: [ "Dev" ]
 
 jobs:
   build:
     runs-on: windows-latest
 
     steps:
+    - name: Checkout del código fuente
+      uses: actions/checkout@v3
 
-      - name: Pass the received secret to an action
-        uses: ./.github/actions/CI
-        with:
-          token: ${{ secrets.access-token }}
+    - name: Configurar Java
+      uses: actions/setup-java@v3
+      with:
+        java-version: '17'
+        distribution: 'adopt'
+        architecture: x64
 
-      - name: Checkout del código fuente
-        uses: actions/checkout@v3
+    - name: Compilar y ejecutar tests
+      run: mvn clean test
 
-      - name: Configurar Java
-        uses: actions/setup-java@v3
-        with:
-          java-version: '17'
-          distribution: 'adopt'
-          architecture: x64
+    - name: Realizar build
+      run: mvn clean package
 
-      - name: Compilar y ejecutar tests
-        run: mvn clean test
+    - name: Crear jar y ejecutar app
+      run: mvn verify
 
-      - name: Realizar build
-        run: mvn clean package
+    - name: Ejecutar Checkstyle
+      run: |
+        # Instalar Checkstyle (si no está instalado)
+        mvn checkstyle:check
 
-      - name: Crear jar y ejecutar app
-        run: mvn verify
+    - name: Subir archivo .jar como artefacto
+      if: success()  # Subir solo si el flujo fue exitoso
+      uses: actions/upload-artifact@v2
+      with:
+        name: EnvioApplication
+        path: target/Envio-0.0.1-SNAPSHOT.jar
 
-      - name: Crear solicitud de extracción
-        if: success()
-        run: |
-          # Configurar las variables necesarias
-          GITHUB_TOKEN=${{ secrets.CIRO }}
-          TARGET_BRANCH="Prod"
-          
-          # Crear la solicitud de extracción usando la API de GitHub
-          curl -X POST \
-            -H "Authorization: token $GITHUB_TOKEN" \
-            -H "Accept: application/vnd.github.v3+json" \
-            https://api.github.com/repos/Nicbag/Ing.Software/pulls \
-            -d '{
-              "title": "Nueva funcionalidad",
-              "head": "'$GITHUB_REF'",
-              "base": "'$TARGET_BRANCH'",
-              "body": "Esta es una nueva funcionalidad."
-            }'
-
-  # Agregado el siguiente paso para pasar el secreto a otro flujo de trabajo
-  pass-secret-to-workflow:
-    uses: ./.github/workflows/config
-    secrets:
-      token: ${{ secrets.access-token }}
