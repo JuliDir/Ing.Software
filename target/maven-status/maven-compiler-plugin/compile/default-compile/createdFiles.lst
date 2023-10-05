@@ -6,3 +6,4 @@ com\EnvioApplication.class
 com\Service\EnvioService.class
 com\Domain\Carrito.class
 com\Domain\EstadoEnvio.class
+com\CorsConfig.class

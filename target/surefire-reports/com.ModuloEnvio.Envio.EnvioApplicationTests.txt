@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.ModuloEnvio.Envio.EnvioApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.581 s - in com.ModuloEnvio.Envio.EnvioApplicationTests
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.206 s - in com.ModuloEnvio.Envio.EnvioApplicationTests
