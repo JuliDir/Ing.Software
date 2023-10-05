@@ -15,6 +15,7 @@ public class EnvioController {
         this.envioService = envioService;
     }
 
+    @CrossOrigin
     @PostMapping("/api/envio/create")
     public Envio createEnvio(@RequestBody Envio envio){
         return envioService.crearEnvio(envio);
