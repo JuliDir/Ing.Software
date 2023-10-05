@@ -118,5 +118,4 @@ public class Envio {
         this.setCiudadorigen(origen);
         this.setCiudaddestino(origen);
     }
-
 }
