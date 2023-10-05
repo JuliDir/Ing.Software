@@ -34,9 +34,9 @@ jobs:
         mvn checkstyle:check
 
     - name: Subir archivo .jar como artefacto
-    if: success()  # Subir solo si el flujo fue exitoso
-    uses: actions/upload-artifact@v2
-    with:
-      name: EnvioApplication
-      path: target/Envio-0.0.1-SNAPSHOT.jar
+      if: success()  # Subir solo si el flujo fue exitoso
+      uses: actions/upload-artifact@v2
+      with:
+        name: EnvioApplication
+        path: target/Envio-0.0.1-SNAPSHOT.jar
 
