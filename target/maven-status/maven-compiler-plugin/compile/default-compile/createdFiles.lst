@@ -1,0 +1,8 @@
+com\Domain\Envio.class
+com\Domain\Producto.class
+com\Domain\CarritoDetalle.class
+com\Controller\EnvioController.class
+com\EnvioApplication.class
+com\Service\EnvioService.class
+com\Domain\Carrito.class
+com\Domain\EstadoEnvio.class
