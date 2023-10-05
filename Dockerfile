@@ -1,5 +1,7 @@
-FROM amazoncorretto:17-alpine-jdk
+FROM eclipse-temurin:17
 
-COPY target/Envio-0.0.1-SNAPSHOT /app.jar
+WORKDIR /app
 
-ENTRYPOINT ["java", "-jar", "/app.jar"]
+COPY target/Envio-0.0.1-SNAPSHOT.jar /app/Envio-0.0.1-SNAPSHOT.jar
+
+ENTRYPOINT ["java", "-jar", "springboot-docker-demo.jar"]
