@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 public class EnvioController {
 
@@ -15,7 +16,6 @@ public class EnvioController {
         this.envioService = envioService;
     }
 
-    @CrossOrigin
     @PostMapping("/api/envio/create")
     public Envio createEnvio(@RequestBody Envio envio){
         return envioService.crearEnvio(envio);
